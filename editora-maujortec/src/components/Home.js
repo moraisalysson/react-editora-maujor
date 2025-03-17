@@ -1,8 +1,8 @@
 import React from "react";
 
 const Home = () => {
-    return (
-        <>
+  return (
+    <>
       <h2>Últimos lançamentos</h2>
       <div className="card">
         <div className="thumb">
@@ -25,7 +25,7 @@ const Home = () => {
         </div>
       </div>
     </>
-    )
+  )
 }
 
 export default Home;
