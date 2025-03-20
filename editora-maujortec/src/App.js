@@ -33,6 +33,21 @@ class App extends Component {
     }
   }
 
+  // usando API fetch, conforme exercício 8.3, página 134
+  // componentDidMount() {
+  //   fetch("api/todosOsLivros.json")
+  //   .then(response => response.json())
+  //   .then(livros => this.setState({ livros }))
+  //   .catch(function(error) {
+  //     document
+  //     .querySelectorAll("main")[0]
+  //     .insertAdjacentHTML("beforeend", "<p class='alerta'>Mensagem de erro</p>");
+  //   })
+  //   .finally(function() {
+  //     console.log("Sempre retorna");
+  //   })
+  // }
+
   //função criada, pois da forma que estava no livro não estava funcionando
   //O element em Route não recebe uma função com props. Ele deve receber um elemento React diretamente.
   //Se precisar de props, use o hook useParams dentro do componente.
@@ -53,7 +68,7 @@ class App extends Component {
             <Route path="/frontend" element={<Frontend livros={this.state.livros} />} />
             <Route path="/programacao" element={<Programacao livros={this.state.livros} />} />
             <Route path="/design" element={<Design livros={this.state.livros} />} />
-            <Route path="/catalago" element={<Catalogo />} />
+            <Route path="/catalago" element={<Catalogo livros={this.state.livros}/>} />
             <Route path="/livro/:livroSlug" element={<this.LivroWrapper livros={this.state.livros} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
