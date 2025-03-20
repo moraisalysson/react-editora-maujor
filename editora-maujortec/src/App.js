@@ -54,7 +54,7 @@ class App extends Component {
             <Route path="/programacao" element={<Programacao livros={this.state.livros} />} />
             <Route path="/design" element={<Design livros={this.state.livros} />} />
             <Route path="/catalago" element={<Catalogo />} />
-            <Route path="/livro/:livroSlug" element={<this.LivroWrapper livroso={this.state.livros} />} />
+            <Route path="/livro/:livroSlug" element={<this.LivroWrapper livros={this.state.livros} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Rodape />
